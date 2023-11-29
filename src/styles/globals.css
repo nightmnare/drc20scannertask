@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Geologica';
+  src: url('./Geologica.ttf');
+}
+
+* {
+  font-family: 'Geologica';
+}
+
+main {
+  min-height: 100vh;
+}
+
+.main-content {
+  min-height: calc(100vh - 300px);
+}
+
+.banner {
+  background-image: url('../images/back.svg');
+}
+
+.pagination {
+  display: flex;
+  margin: 20px;
+  justify-content: center;
+}
+
+.pagination li {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .pagination li {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.pagination li:hover {
+  border: 1px solid rgb(255, 192, 150);
+}
+
+.pagination li a {
+  line-height: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+.pagination li.break {
+  border: none;
+}
+
+.pagination li.selected {
+  background-color: #f06a1c;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
